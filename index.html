@@ -139,7 +139,7 @@ var reposList = document.getElementById('repos-list'),
 			f += r.forks;
 			fork ? lf++ : lp++;
 			html += '<li' + fork + '>'
-				+ '<a href="' + r.html_url + '">'
+				+ '<a href="' + r.homepage + '">'
 				+ '<span class="info"><b class="language">' + (r.language || '') + '</b> <b class="stars">' + watchers + '</b> <b class="forks">' + forks + '</b></span>'
 				+ '<b>' + r.name + '</b> '
 				+ '<span class="desc">' + r.description + '</span>'
