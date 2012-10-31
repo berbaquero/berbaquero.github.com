@@ -1,69 +1,154 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Ejemplo : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Ejemplo</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/berbaquero">View on GitHub</a>
-
-          <h1 id="project_title">Ejemplo</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+<meta charset="UTF-8">
+<title>BerBaquero @ GitHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	color: #666;
+	background-color: #fff;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+h1{
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+h1 a{
+	display: block;
+	line-height: 20px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #ddd;
+}
+#projects-count{
+	font-weight: normal;
+	color: #ccc;
+	display: inline-block;
+	line-height: 1.3em;
+	margin-left: .5em;
+}
+a{
+	color: #666;
+	background-color: transparent;
+	text-decoration: none;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+a:hover{
+	color: #fff;
+	background-color: #4286F5;
+}
+a > b {
+	font-size: 23px;
+}
+#repos-list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#repos-list li{
+	display: inline;
+}
+#repos-list li a{
+	position: relative;
+	display: block;
+	line-height: 30px;
+	padding: 10px 20px;
+	overflow: hidden;
+}
+#repos-list li:nth-child(odd) a{
+	background-color: #fafafa;
+}
+#repos-list li a:hover{
+	color: #fff;
+	background-color: #4286F5;
+}
+#repos-list li a:hover .desc {
+	color: #fff;
+}
+#repos-list li.fork a:before{
+	color: #999;
+	content: '\2646';
+	position: absolute;
+	left: 5px;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+#repos-list li a .desc{
+	color: #ccc;
+	display: inline-block;
+	line-height: 1.3em;
+	margin-left: .5em;
+}
+#projects-info,
+#repos-list li a .info{
+	float: right;
+	clear: right;
+}
+b.stars,
+b.forks{
+	font-weight: bold;
+	display: inline-block;
+}
+b.stars:before,
+b.forks:before{
+	display: inline-block;
+	font-size: 14px;
+	width: 20px;
+	text-align: center;
+}
+b.stars:before{
+	content: '\2605';
+}
+b.forks:before{
+	content: '\2646';
+}
+#title { font-size: 23px; }
+</style>
+<h1><a href="http://github.com/berbaquero"><span id="projects-info"></span><span id='title'>BerBaquero @ GitHub</span><span id="projects-count"></span> </a></h1>
+<ul id="repos-list"></ul>
+<script>
+var reposList = document.getElementById('repos-list'),
+	projectsCount = document.getElementById('projects-count'),
+	projectsInfo = document.getElementById('projects-info'),
+	load = function(data){
+		if (!data || !data.data || !data.data.length) return;
+		var repositories = data.data,
+			html = '';
+		repositories.sort(function(a, b){
+			var aFork = a.fork, bFork = b.fork;
+			if (aFork && !bFork) return 1;
+			if (!aFork && bFork) return -1;
+			return new Date(b.pushed_at) - new Date(a.pushed_at);
+		});
+		var l = repositories.length, lp = 0, lf = 0, w = 0, f = 0;
+		for (var i=0; i<l; i++){
+			var r = repositories[i],
+				fork = r.fork ? ' class="fork"' : '',
+				watchers = r.watchers,
+				forks = r.forks;
+			w += r.watchers;
+			f += r.forks;
+			fork ? lf++ : lp++;
+			html += '<li' + fork + '>'
+				+ '<a href="' + r.html_url + '">'
+				+ '<span class="info"><b class="language">' + (r.language || '') + '</b> <b class="stars">' + watchers + '</b> <b class="forks">' + forks + '</b></span>'
+				+ '<b>' + r.name + '</b> '
+				+ '<span class="desc">' + r.description + '</span>'
+				+ '</a>';
+		}
+		html += '<li><a href="http://www.siaconca.com/"><span class="info"><b class="language">JavaScript</b> </span><b>siaconca.com</b> <span class="desc">Design and Code of Web Site for Venezuelan Software Developing company, SIACONCA.</span></a></li>'
+		reposList.innerHTML = html;
+		projectsCount.innerHTML = l + ' repositorios; ' + lp + ' p&uacute;blicos, ' + lf + ' forks';
+		projectsInfo.innerHTML = '<b class="stars">' + w + '</b> <b class="forks">' + f + '</b>';
+	};
+</script>
+<script src="https://api.github.com/users/berbaquero/repos?callback=load&per_page=20"></script>
