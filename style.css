@@ -1,0 +1,174 @@
+body {
+	color: #666;
+	background-color: whiteSmoke;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 10px 20px;
+	margin-top: 7px;
+}
+
+h1 { 
+	font-size: 65px;
+	margin: 0;
+	margin-bottom: 20px;
+	text-shadow: 0 2px 0 white;
+}
+
+h2 {
+	font-size: 52px;
+	text-shadow: 0 2px 0 white;
+}
+
+h3 {
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+}
+
+#github {
+	display: block;
+	line-height: 20px;
+	padding: 10px 20px;
+	border-bottom: 3px solid #fff;
+	margin: 0 -20px;
+	background-color: #4286F5;
+}
+
+p { font-size: 26px; }
+
+#projects-count {
+	font-weight: normal;
+	color: #ccc;
+	display: inline-block;
+	line-height: 1.3em;
+	margin-left: .5em;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+	color: #fff;
+}
+
+a > b {
+	font-size: 23px;
+}
+
+#repos-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#repos-list li {
+	display: inline;
+}
+
+#repos-list li a {
+	position: relative;
+	display: block;
+	line-height: 30px;
+	padding: 10px 20px;
+	overflow: hidden;
+	margin: 0 -20px;
+	background-color: #4286F5;
+	border-bottom: 3px solid white;
+}
+
+#repos-list li a:hover .desc {
+	color: #777;
+}
+
+#repos-list li.fork a:before {
+	color: #999;
+	content: '\2646';
+	position: absolute;
+	left: 5px;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#repos-list li a .desc {
+	color: #ddd;
+	display: inline-block;
+	line-height: 1.3em;
+	margin-left: .5em;
+}
+
+#projects-info,
+#repos-list li a .info {
+	float: right;
+	clear: right;
+}
+
+b.stars,
+b.forks {
+	font-weight: bold;
+	display: inline-block;
+}
+
+b.stars:before,
+b.forks:before {
+	display: inline-block;
+	font-size: 14px;
+	width: 20px;
+	text-align: center;
+}
+
+b.stars:before {
+	content: '\2605';
+}
+
+b.forks:before {
+	content: '\2646';
+}
+
+#title { font-size: 23px; }
+
+#top-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #4286F5;
+	height: 7px;
+	width: 100%;
+}
+
+.link:hover, #repos-list li a:hover, .link:hover a { background-color: whiteSmoke; color: #777; }
+
+.link { 
+    -webkit-transition-duration: .2s; transition-duration: .2s;
+	margin: 0 -20px;
+	padding: 10px 20px;
+    border-bottom: 3px solid white;
+}
+
+.link a { text-decoration: underline; }
+
+.link a:hover { text-decoration: none; }
+
+.link, .link a { color: white; }
+
+.link-soundcloud { background-color: #F60; }
+
+.link-soundcloud a:hover { color: white; background-color: #F60; }
+
+.link-twitter { background-color: #00aced; }
+
+.link-twitter a:hover { color: white; background-color: #00aced; }
+
+.link-linkedin { background-color: #007bb6; }
+
+.link-linkedin a:hover { color: white; background-color: #007bb6; }
+
+@media (max-width: 630px) {
+	h1 { font-size: 55px; }
+}
