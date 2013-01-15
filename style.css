@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	padding: 10px 20px;
 	margin-top: 7px;
+	background-image: url('bgnoise.png');
 }
 
 h1 { 
