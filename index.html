@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
-	<title>Bernardo Baquero Stand</title>
+	<title>Bernardo Baquero Stand - Web and Front-end Developer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script>if(location.hostname==='berbaquero.github.com'){var _gaq=[['_setAccount','UA-37661750-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))}</script>
 </head>
 <body>
-	<div id='top-bar'></div>
-	<h1>Bernardo Baquero Stand</h1>
-	<p>I love building stuff for The Web, and creating sounds on the guitar.</p>
-	<a id='github' href="http://github.com/berbaquero" target='_blank'></span><span id='title'>These are some of the projects I've created @ GitHub:</span></a>
-	<ul id="repos-list"></ul>
-	<p class='link link-linkedin'>I have experience developing enterprise Java-based web applications, and as a front-end developer. <a href='http://ve.linkedin.com/in/bernardobaquero' target='_blank'>Find out more about it on my LinkedIn profile</a>.</p>
-	<p class='link link-soundcloud'>I am also a <i>guitarist</i> and music maker \m/ <a href='http://soundcloud.com/berbaquero' target='_blank'>Listen to some of the sounds I've made @ SoundCloud</a>.</p>
-	<p class='link link-twitter'>I tweet about interesting links, apps and stories. <a href="https://twitter.com/berbaquero">You can follow me on Twitter @BerBaquero</a>.</p>
+
+	<header>
+		<h1>Bernardo Baquero Stand</h1>
+		<p>I love building stuff on The Web, and creating sounds on the guitar.</p>
+		<article id="webapps">
+			<img src="img/poppp1.png" alt="Poppp" id="poppp">
+			<img src="img/reeddit1.png" alt="Reeddit" id="reeddit">
+		</article>
+	</header>
+
+	<article id="links">
+		<a id='github' href="http://github.com/berbaquero" target='_blank'></span><span id='title'>These are some of the projects I've created @ GitHub:</span></a>
+		<ul id="repos-list"></ul>
+		<p class='link link-linkedin'>I have experience developing enterprise Java-based web applications, and as a front-end developer. <a href='http://ve.linkedin.com/in/bernardobaquero' target='_blank'>Find out more about it on my LinkedIn profile</a>.</p>
+		<p class='link link-soundcloud'>I am also a <i>guitarist</i> and music maker \m/ <a href='http://soundcloud.com/berbaquero' target='_blank'>Listen to some of the sounds I've made @ SoundCloud</a>.</p>
+		<p class='link link-twitter'>I tweet about interesting links, apps and stories. <a href="https://twitter.com/berbaquero">You can follow me on Twitter @BerBaquero</a>.</p>
+	</article>
+
 	<script src='script.js'></script>
 	<script src="https://api.github.com/users/berbaquero/repos?callback=load&per_page=20"></script>
 </body>
