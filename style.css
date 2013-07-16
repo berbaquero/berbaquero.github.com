@@ -60,7 +60,6 @@ h3 {
 	background-color: #4286F5;
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
-	/* box-shadow: 0 2px 3px #CCC; */
 }
 
 p { font-size: 26px;
@@ -105,8 +104,7 @@ a > b {
 	padding: 10px 20px;
 	overflow: hidden;
 	background-color: #4286F5;
-	margin-bottom: 5px;	
-	/* box-shadow: 0 2px 3px #CCC; */
+	margin-bottom: 5px;
 }
 
 #repos-list li:last-child a {
@@ -178,12 +176,10 @@ b.forks:before {
 
 .link:hover, #repos-list li a:hover, .link:hover a { background-color: white; color: #777; }
 
-.link {
-	-webkit-transition-duration: .2s;
-	transition-duration: .2s;
-	padding: 10px 20px;
-	border-radius: 7px;
-}
+.link {-webkit-transition-duration: .2s;
+transition-duration: .2s;
+padding: 10px 20px;
+border-radius: 7px;}
 
 .link a { text-decoration: underline; }
 
