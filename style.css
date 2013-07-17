@@ -247,10 +247,7 @@ b.forks:before {
 	font-weight: bold;
 }
 
-footer {
-	background-color: #ddd;
-	padding: 20px 10px;
-}
+footer { padding: 20px 10px; }
 
 footer p {
 	text-align: center;
