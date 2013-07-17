@@ -1,44 +1,41 @@
 body {
 	color: whitesmoke;
 	background-color: whiteSmoke;
-	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 	font-family: "Roboto Slab", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-size: 14px;
 	margin: 0;
 }
 
 header { 
-	background-image: url('../img/spacebg.png');
+	background-image: url('img/spacebg.png');
+	background-position-y: 60%;
 	height: 700px;
 	overflow-y: hidden;
+	border-bottom: 1px solid #ccc;
 }
 
-h1 { 
+header h1 {
 	font-size: 65px;
 	margin: 0;
-	margin-bottom: 20px;
 	text-align: center;
 	padding-top: 30px; 
 }
 
-h2 {
-	font-size: 52px;
-	text-shadow: 0 2px 0 white;
-}
-
-h3 {
-	font-size: 13px;
-	margin: 0;
-	padding: 0;
-}
-
-#webapps {
+header h2 {
+	font-size: 28px;
 	text-align: center;
+	margin-top: 0;	
 }
 
-#webapps img {
-	vertical-align: top;
+header p {
+	font-size: 26px;
+	text-align: center;
+	margin-top: 0;
 }
+
+#webapps { text-align: center; }
+
+#webapps img { vertical-align: top; }
 
 #poppp {
 	width: 320px;
@@ -46,25 +43,27 @@ h3 {
 	margin-top: 30px;
 }
 
+#reeddit { max-width: 468px; }
+
 #links {
 	background-color: whiteSmoke;
-	box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.5);
-	border-top: 1px solid #999;
-	padding: 50px;
+	max-width: 960px;
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 50px;
 }
 
 #github {
 	display: block;
 	line-height: 20px;
 	padding: 10px 20px;
-	margin-bottom: 5px;
-	background-color: #4286F5;
+	 margin-bottom: 5px;
+	background-color: #3192cd;
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
 }
 
-p { font-size: 26px;
- text-align: center;}
+#github, #repos-list { margin: 5px 10px; }
 
 #projects-count {
 	font-weight: normal;
@@ -84,19 +83,11 @@ a {
 	color: #fff;
 }
 
-a > b {
-	font-size: 23px;
-}
+a > b { font-size: 23px; }
 
-#repos-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+#repos-list { padding: 0; list-style: none; }
 
-#repos-list li {
-	display: inline;
-}
+#repos-list li { display: inline; }
 
 #repos-list li a {
 	position: relative;
@@ -104,7 +95,7 @@ a > b {
 	line-height: 30px;
 	padding: 10px 20px;
 	overflow: hidden;
-	background-color: #4286F5;
+	background-color: #3192cd;
 	margin-bottom: 5px;
 }
 
@@ -113,9 +104,9 @@ a > b {
 	border-bottom-right-radius: 7px;
 }
 
-#repos-list li a:hover .desc {
-	color: #777;
-}
+#repos-list li a:hover, .link:hover a { background-color: white; color: #777; }
+
+#repos-list li a:hover .desc { color: #777; }
 
 #repos-list li.fork a:before {
 	color: #999;
@@ -175,42 +166,97 @@ b.forks:before {
 	width: 100%;
 }
 
-.link:hover, #repos-list li a:hover, .link:hover a { background-color: white; color: #777; }
-
 .link {
 	-webkit-transition-duration: .2s;
 	transition-duration: .2s;
-	padding: 10px 20px;
-	border-radius: 7px;
+	font-size: 15px;
+	line-height: 24px;
+	border-radius: 5px;
+	float: left;
+	width: 31%;
+	padding: 10px;
 }
 
 .link a { text-decoration: underline; }
 
+.link span {
+	font-weight: bold;
+	display: block;
+	font-size: 20px;
+	margin-bottom: 7px;
+}
+
 .link a:hover { text-decoration: none; }
 
-.link, .link a { color: white; }
-
-.link-soundcloud { background-color: #F60; }
+.link, .link a { color: #777;}
 
 .link-soundcloud a:hover { color: white; background-color: #F60; }
 
-.link-twitter { background-color: #00aced; }
-
-.link-twitter a:hover { color: white; background-color: #00aced; }
-
-.link-linkedin { background-color: #007bb6; }
-
 .link-linkedin a:hover { color: white; background-color: #007bb6; }
 
+#contact {
+	background-color: white;
+	text-align: center;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #bbb;
+	clear: both;
+}
+
+#contact p {
+	color: #aaa;
+	font-size: 22px;
+	margin: 0;
+	padding: 35px 0;
+}
+
+#contact a {
+	padding: 3px 10px;
+	background-color: #3192cd;
+	border-radius: 5px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+footer {
+	background-color: #ddd;
+	padding: 20px 10px;
+}
+
+footer p {
+	text-align: center;
+	color: #888;
+}
+
+footer a {
+	text-align: center;
+	display: block;
+	color: #777;
+}
+
+#avatar {
+	margin: 0 auto;
+	display: block;
+	border-radius: 90px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
 @media (max-width: 630px) {
-	header {
-		padding: 10px;
-		overflow-x: hidden;
-		height: 880px;
-	}
+
+	header { overflow-x: hidden; height: 770px; }
+
+	header h1 { font-size: 40px; padding-top: 10px; }
+
+	header h2 { font-size: 22px;}
+	
+	header p { padding: 0 10px; }
+
 	h1 { font-size: 55px; padding-top: 0; }
 
-	#links {
-		padding: 10px;
-	}
+	.link { width: 90%; min-width: 300px; }
+
+	#poppp { display: none; }
+
+	#reeddit { width: 100%; }
+
+	#github { margin-bottom: 0; }
 }
