@@ -4,11 +4,9 @@ var reposList = document.getElementById('repos-list'),
 		var repositories = data.data,
 			html = '';
 		repositories.sort(function(a, b) {
-			var aFork = a.fork,
-				bFork = b.fork;
-			if(aFork && !bFork) return 1;
-			if(!aFork && bFork) return -1;
-			return new Date(b.pushed_at) - new Date(a.pushed_at);
+			var aC = a.watchers_count,
+				bC = b.watchers_count;
+			return bC - aC;
 		});
 		var l = repositories.length,
 			lp = 0,
