@@ -249,16 +249,18 @@ b.forks:before {
 
 footer { padding: 20px 10px; }
 
-footer p {
+.my-links {
+	padding: 20px;
 	text-align: center;
-	color: #888;
 }
 
-footer a {
-	text-align: center;
-	display: block;
+.my-links a {
 	color: #777;
+	margin-right: 12px;
+	font-size: 18px;
 }
+
+.my-links a:hover { color: #3192CD; }
 
 #avatar {
 	margin: 0 auto;
@@ -288,4 +290,11 @@ footer a {
 	#github { margin-bottom: 0; }
 
 	#about p, #about h2 { width: 80%; }
+}
+
+@media (max-width: 480px) {
+	.my-links a {
+		display: block;
+		padding: 5px;
+	}
 }
