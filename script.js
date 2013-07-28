@@ -1,6 +1,6 @@
 var reposList = document.getElementById('repos-list'),
 	load = function(data) {
-		if(!data || !data.data || !data.data.length) return;
+		if (!data || !data.data || !data.data.length) return;
 		var repositories = data.data,
 			html = '';
 		repositories.sort(function(a, b) {
@@ -11,7 +11,7 @@ var reposList = document.getElementById('repos-list'),
 		var l = repositories.length,
 			lp = 0,
 			lf = 0;
-		for(var i = 0; i < l; i++) {
+		for (var i = 0; i < l; i++) {
 			var r = repositories[i],
 				fork = r.fork ? ' class="fork"' : '',
 				watchers = r.watchers,
