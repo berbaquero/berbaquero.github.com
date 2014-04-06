@@ -1,0 +1,6 @@
+---
+published: true
+title: Prueba
+layout: post
+---
+Esto es el texto de un blog de prueba en TinyPress.
