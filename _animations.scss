@@ -1,0 +1,70 @@
+.anim {
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes reveal {
+	0% {
+		transform: scale(.5);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.fade-in-down {
+	animation: {
+		name: fadeInDown;
+		delay: 200ms;
+		duration: 500ms;
+	}
+}
+
+.fade-in-up {
+	animation: {
+		name: fadeInUp;
+		delay: 300ms;
+		duration: 500ms;
+	}
+
+	&--delayed {
+		animation: {
+			delay: 1.5s;
+			duration: 1.5s;
+		}
+	}
+}
+
+.reveal {
+	animation: {
+		name: reveal;
+		delay: 700ms;
+		duration: 1s;
+	}
+}
+

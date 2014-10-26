@@ -1,0 +1,189 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,700italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+@import "animations";
+
+$font-head: 'Open Sans', sans-serif;
+$font-body: 'Gentium Book Basic', serif;
+$blueish-gray: #8e9eab;
+$white: #eef2f3;
+$color-main: $blueish-gray;
+
+%centered-text {
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #eef2f3;
+	background-image: radial-gradient(ellipse at center, $white 45%, $color-main 100%);
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	color: darken($color-main, 5%);
+	transition: color 300ms;
+
+	&:hover {
+		color: darken($color-main, 30%);
+	}
+}
+
+main {
+	.wrap {
+		width: 100%;
+	}
+
+	p,
+	h1 {
+		width: 500px;
+		margin: .5em auto;
+	}
+
+	h1 {
+		@extend %centered-text;
+		font: 800 4em $font-head;
+		text-transform: uppercase;
+		margin: 0 auto;
+	}
+
+	p {
+		font: 2.5em $font-body;
+	}
+}
+
+.sub {
+	@extend %centered-text;
+	width: 21.09375em;
+	font: {
+		family: $font-head;
+		size: 2.3em;
+		style: italic;
+		weight: 700;
+	}
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 3.125em;
+		height: 1.5625em;
+		background: {
+			image: linear-gradient(to bottom, darken($color-main, 20%) 3px, transparent 0);
+			repeat: repeat-x;
+			position: 0 .71875em;
+		}
+	}
+
+	&::before {
+		right: 0;
+	}
+
+	&::after {
+		left: 0;
+	}
+}
+
+.highlight {
+	color: darken($color-main, 25%);
+}
+
+.links {
+	width: 18.75rem;
+	text-align: center;
+	margin: 0 auto;
+	border-top: 3px solid darken($color-main, 20%);
+	padding: {
+		top: .625rem;
+	}
+	margin: {
+		top: 3.125rem;
+		bottom: 50px;
+	}
+
+	main h1:hover + &,
+	&:hover {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+
+	a {
+		margin: 0 10px;
+		font: {
+			family: $font-body;
+		}
+	}
+}
+
+@media only screen and (max-width: 770px) {
+	html {
+		font-size: 10px;
+	}
+
+	.sub {
+		font-size: 2em;
+		&::before,
+		&::after {
+			content: none;
+		}
+	}
+
+	.links a {
+		font-size: 1.5em;
+	}
+
+	.links,
+	.sub,
+	main p,
+	main h1 {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 770px) and (min-width: 410px) {
+
+	.links,
+	.sub,
+	main p,
+	main h1 {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 770px) and (min-width: 610px) {
+	.links,
+	.sub,
+	main p,
+	main h1 {
+		width: 70%;
+	}
+}
+
+@media only screen and (min-height: 700px) {
+
+	html {
+		overflow: hidden;
+	}
+
+	main {
+		.wrap {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			height: auto;
+		}
+	}
+
+	.links {
+		margin-bottom: 0;
+	}
+}

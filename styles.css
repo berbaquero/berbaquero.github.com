@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,700italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+.anim { -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+
+@-webkit-keyframes fadeInDown { 0% { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); }
+  100% { opacity: 1; -webkit-transform: none; transform: none; } }
+
+@keyframes fadeInDown { 0% { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); }
+  100% { opacity: 1; -webkit-transform: none; transform: none; } }
+@-webkit-keyframes fadeInUp { 0% { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); }
+  100% { opacity: 1; -webkit-transform: none; transform: none; } }
+@keyframes fadeInUp { 0% { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); }
+  100% { opacity: 1; -webkit-transform: none; transform: none; } }
+@-webkit-keyframes reveal { 0% { -webkit-transform: scale(0.5); transform: scale(0.5); opacity: 0; }
+  100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; } }
+@keyframes reveal { 0% { -webkit-transform: scale(0.5); transform: scale(0.5); opacity: 0; }
+  100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; } }
+.fade-in-down { -webkit-animation-name: fadeInDown; animation-name: fadeInDown; -webkit-animation-delay: 200ms; animation-delay: 200ms; -webkit-animation-duration: 500ms; animation-duration: 500ms; }
+
+.fade-in-up { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; -webkit-animation-delay: 300ms; animation-delay: 300ms; -webkit-animation-duration: 500ms; animation-duration: 500ms; }
+.fade-in-up--delayed { -webkit-animation-delay: 1.5s; animation-delay: 1.5s; -webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
+
+.reveal { -webkit-animation-name: reveal; animation-name: reveal; -webkit-animation-delay: 700ms; animation-delay: 700ms; -webkit-animation-duration: 1s; animation-duration: 1s; }
+
+main h1, .sub { text-align: center; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+html { background-color: #eef2f3; background-image: -webkit-radial-gradient(center, ellipse, #eef2f3 45%, #8e9eab 100%); background-image: radial-gradient(ellipse at center, #eef2f3 45%, #8e9eab 100%); height: 100%; }
+
+body { margin: 0; }
+
+a { color: #7f91a0; -webkit-transition: color 300ms; transition: color 300ms; }
+a:hover { color: #44515c; }
+
+main .wrap { width: 100%; }
+main p, main h1 { width: 500px; margin: .5em auto; }
+main h1 { font: 800 4em "Open Sans", sans-serif; text-transform: uppercase; margin: 0 auto; }
+main p { font: 2.5em "Gentium Book Basic", serif; }
+
+.sub { width: 21.09375em; font-family: "Open Sans", sans-serif; font-size: 2.3em; font-style: italic; font-weight: 700; position: relative; }
+.sub::before, .sub::after { content: ''; position: absolute; width: 3.125em; height: 1.5625em; background-image: -webkit-gradient(linear, left top, left bottom, color-stop(3px, #5a6b79), color-stop(0, transparent)); background-image: -webkit-linear-gradient(top, #5a6b79 3px, transparent 0); background-image: linear-gradient(to bottom, #5a6b79 3px, transparent 0); background-repeat: repeat-x; background-position: 0 .71875em; }
+.sub::before { right: 0; }
+.sub::after { left: 0; }
+
+.highlight { color: #4f5e6a; }
+
+.links { width: 18.75rem; text-align: center; margin: 0 auto; border-top: 3px solid #5a6b79; padding-top: .625rem; margin-top: 3.125rem; margin-bottom: 50px; }
+main h1:hover + .links, .links:hover { opacity: 1; -webkit-transform: translateY(0%); -ms-transform: translateY(0%); transform: translateY(0%); }
+.links a { margin: 0 10px; font-family: "Gentium Book Basic", serif; }
+
+@media only screen and (max-width: 770px) { html { font-size: 10px; }
+  .sub { font-size: 2em; }
+  .sub::before, .sub::after { content: none; }
+  .links a { font-size: 1.5em; }
+  .links, .sub, main p, main h1 { width: 100%; padding: 10px; text-align: center; } }
+@media only screen and (max-width: 770px) and (min-width: 410px) { .links, .sub, main p, main h1 { width: 90%; } }
+@media only screen and (max-width: 770px) and (min-width: 610px) { .links, .sub, main p, main h1 { width: 70%; } }
+@media only screen and (min-height: 700px) { html { overflow: hidden; }
+  main .wrap { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); height: auto; }
+  .links { margin-bottom: 0; } }
